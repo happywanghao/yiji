@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <script>
+            document.documentElement.style.fontSize=document.documentElement.clientWidth / 10.8 + "px";
+        </script>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+        <link rel="stylesheet" href="css/thuijian.css" />
+    </head>
+    <body>
+        <div class="worp">
+            <div class="search">
+                <input type="input" />
+                <img src="img/fangdajing.png" alt="" />
+            </div>
+            <div class="tab">
+                <div class="tab_left tab_left_top">展</div>
+                <div class="tab_right">文</div>
+            </div>
+            <div class="topkong"></div>
+            <div class="main">
+                <div class="mainall clearfix">
+                    <div class="zhan">
+                        <div><a><img src="images/tl1_02.jpg" alt="" /></a></div>
+                        <div><a href="zengfanzhi.html"><img src="images/tl2_02.jpg" alt="" /></a></div>
+                        <div><a><img src="images/tl3_02.jpg" alt="" /></a></div>
+                    </div>
+                    <div class="wen">
+                        <div><a href="wenbaxisheyingshi.html"><img src="images/tr1_01.jpg" alt="" /></a></div>
+                        <div><a href="wenbinze.html"><img src="images/tr2_02.jpg" alt="" /></a></div>
+                        <div><a><img src="images/tr3_02.jpg" alt="" /></a></div>
+                        <div><a><img src="images/tr4_02.jpg" alt="" /></a></div>
+                        <div><a><img src="images/tr5_02.jpg" alt="" /></a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <ul class="clearfix">
+                    <li><a href="home.html">展讯</a></li>
+                    <li><a>推荐</a></li>
+                    <li><a href="fabu.html">发布</a></li>
+                    <li><a href="geren.html">个人</a></li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/hammer.js"></script>
+        <script>
+
+            var tab=document.getElementsByClassName("tab")[0]
+            var tab_left=tab.getElementsByClassName("tab_left")[0]
+            var tab_right=tab.getElementsByClassName("tab_right")[0]
+            var mainall=document.getElementsByClassName("mainall")[0]
+            var main=document.getElementsByClassName("main")[0]
+            var width=window.getComputedStyle(main,null)["width"]
+            function animate(obj,target,time,fun1){
+                var targetStyle=[]
+                for(var j in target){
+                    targetStyle.push(j)
+                }
+                    var tar=targetStyle[0]
+                     var yuanweizhi=parseFloat(window.getComputedStyle(obj,null)[tar]);
+                    var mubiaoweizhi=parseFloat(target[tar])
+                    var num=mubiaoweizhi - yuanweizhi
+                    var t=num/time*10
+                    t=parseInt(t)
+                        clearInterval(a)
+                    var a=setInterval(function(){
+                          yuanweizhi=yuanweizhi+t;
+                          if(Math.abs(yuanweizhi-mubiaoweizhi)<=Math.abs(t)){
+                                clearInterval(a)
+                                yuanweizhi=mubiaoweizhi
+                                if(fun1){
+                                    fun1()
+                                }
+                            } ;
+                        obj.style[tar]=yuanweizhi+"px";
+                    },10)
+            }
+            tab_left.addEventListener("touchstart",function(event){
+                tab_left.classList.add('tab_left_top')
+                tab_right.classList.remove("tab_right_top")
+                document.body.scrollTop = 0;
+                animate(mainall,{"margin-left":0},200)
+            })
+            tab_right.addEventListener("touchstart",function(event){
+                tab_right.classList.add("tab_right_top")
+                tab_left.classList.remove('tab_left_top')
+                document.body.scrollTop = 0;
+                animate(mainall,{"margin-left":"-"+width},200)
+            })
+
+
+            var main=document.getElementsByClassName("main")[0]
+            new Hammer(main).on("swipeleft",function(){
+                tab_right.classList.add("tab_right_top")
+                tab_left.classList.remove('tab_left_top')
+                document.body.scrollTop = 0;
+                animate(mainall,{"margin-left":"-"+width},200)
+            })
+            new Hammer(main).on("swiperight",function(){
+                tab_left.classList.add('tab_left_top')
+                tab_right.classList.remove("tab_right_top")
+                document.body.scrollTop = 0;
+                animate(mainall,{"margin-left":0},200)
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <script>
+            document.documentElement.style.fontSize=document.documentElement.clientWidth / 10.8 + "px";
+        </script>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/xiaoxiangdeshenghua.css" />
+    </head>
+    <body>
+    <div class="worp">
+        <div class="back"><a href="home.html">&lt;</a></div>
+
+        <div class="main1">
+            <img src="images/u194_01.jpg" alt="" />
+        </div>
+        <div class="main4">
+            <div class="main4_top"><img src="images/pinglun_21.jpg" alt="" /></div>
+            <ul class="main4_ul">
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>挺好的，特别喜欢这种风格</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>喜欢</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>挺好的，特别喜欢这种风格</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>喜欢</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>挺好的，特别喜欢这种风格</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>喜欢</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>挺好的，特别喜欢这种风格</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <div>
+                        <img src="images/tx_03.jpg" alt="" />
+                    </div>
+                    <div>
+                        <p>阿德</p>
+                        <p>2016.08.21</p>
+                        <p>喜欢</p>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="main4_zhankai">
+                <p>展开全部123条评论<img src="images/xiajiantou.png" alt="" /></p>
+            </div>
+        </div>
+        <div class="footerkong"></div>
+        <div class="footer">
+            <ul class="footer_ul clearfix">
+                <li><a><img src="images/guanzhu.png" alt="" />关注</a></li>
+                <li><a href="ditu.html"><img src="images/daozhequ.png" alt="" />到这</a></li>
+                <li><a class="xianshizhezhao" ><img src="images/fenxiang.png" alt="" />分享</a></li>
+                <li><a href="pinglun.html"><img src="images/pinglun.png" alt="" />评论</a></li>
+            </ul>
+        </div>
+        <div class="zhezhao none"></div>
+        <div class="baocuntupian none">
+            <div>
+                <p>收藏到自己的集</p>
+                <p>保存图片</p>
+            </div>
+            <div>取消</div>
+        </div>
+    </div>
+    <div class="zhezhao none"></div>
+        <div class="baocuntupian none">
+            <div>
+                <p>收藏到自己的集</p>
+                <p>保存图片</p>
+            </div>
+            <div>取消</div>
+        </div>
+    </div>
+    <div class="zhezhao none"></div>
+    <div class="fenxiang"><img class="quxiaozhezhao" src="images/fenxiang_02.jpg" alt="" /></div>
+        <script src="js/hammer.js"></script>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script>
+            $(".worp").animate({"top":0},300)
+            var main4_ul=document.getElementsByClassName("main4_ul")[0]
+            var liArr=main4_ul.getElementsByTagName("li")
+            for(var i=liArr.length-1;i>1;i--){
+                liArr[i].classList.add("none")
+            }
+            var main4_zhankai=new Hammer(document.getElementsByClassName("main4_zhankai")[0])
+
+            main4_zhankai.on("tap",function(e){
+                for(var i=0;i<liArr.length;i++){
+                    liArr[i].classList.remove("none")
+                }
+                document.getElementsByClassName("main4_zhankai")[0].classList.add("none")
+            })
+
+            var zhezhao=document.getElementsByClassName("zhezhao")[0]
+            var xianshizhezhao=document.getElementsByClassName("xianshizhezhao")[0]
+            var quxiaozhezhao=document.getElementsByClassName("quxiaozhezhao")[0]
+              new Hammer(xianshizhezhao).on("tap",function(){
+                $(".zhezhao").removeClass('none')
+                $(".fenxiang").animate({"bottom":0},300)
+             })
+             new Hammer(quxiaozhezhao).on("tap",function(){
+                $(".zhezhao").addClass('none')
+                $(".fenxiang").animate({"bottom":"-6.06rem"},300)
+             })
+             zhezhao.addEventListener("touchmove",function(event){
+                event.preventDefault();
+                return false;})
+
+        </script>
+    </body>
+</html>

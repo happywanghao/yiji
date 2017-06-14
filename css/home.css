@@ -1,0 +1,437 @@
+/*
+* @Author: anchen
+* @Date:   2017-04-13 15:39:28
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-04-19 15:35:59
+*/
+ html{
+                width: 100%;
+                height: 100%;
+                overflow:hidden;
+            }
+            body{
+
+                width: 100%;
+                height: 100%;
+            }
+            .worp{
+                width: 100%;
+            }
+            .worp .searchkong{
+                width: 100%;
+                height:1.75rem;
+            }
+            .worp .searchkong_big{
+                height:5.66rem;
+
+
+                background:#fff;
+                width: 100%;
+
+            }
+            .worp .search{
+                position:fixed;
+                top:0;
+                z-index: 15;
+                width: 100%;
+                height:1.75rem;
+                background: url(../img/u297.jpg) no-repeat;
+                -webkit-background-size: 100%;
+                background-size: 100%;
+            }
+            .worp .search>input{
+
+                width: 8.52rem;
+                padding:0.7rem 0.5rem 0.25rem 0.5rem;
+                font-size: 0.6rem;
+                line-height: 0.6rem;
+                background:none;
+                border:none;
+                outline: none;
+            }
+            .worp .search>img{
+                display: block;
+                float: right;
+                margin-right: 0.4rem;
+                width:0.69rem;
+                margin-top: 0.75rem;
+                cursor: pointer;
+            }
+            .worp .lunbo{
+                overflow:hidden;
+                position:relative;
+                width: 100%;
+                height: 5.47rem;
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+            .worp .lunbo_none{
+                margin-top: -5.63rem;
+            }
+            .worp .lunbo_block{
+                margin-top: 0;
+            }
+            .worp .lunbo_box>img{
+                display: block;
+                overflow:hidden;
+                width:10.8rem;
+                float: left;
+            }
+            .worp .swiper-container-horizontal>.swiper-pagination-bullets{
+                height:0.18rem;
+                bottom:0.24rem;
+            }
+            .worp .swiper-pagination-bullet{
+                background:#fff;
+                width:0.18rem;
+                margin:0 0.09rem;
+                opacity: 1;
+            }
+            .worp .swiper-pagination-bullet-active{
+                background:red;
+            }
+            .worp .lunbo2{
+                width: 100%;
+                padding:0.2rem 0;
+                overflow:hidden;
+                top:1.58rem;
+                z-index: 11;
+                background:#fff;
+            }
+            .worp .lunbo2_box>div>img{
+                width: 100%;
+                display: block;
+            }
+            .worp .main{
+                width: 100%;
+                top:4.65rem;
+                bottom:1.45rem;
+                z-index: 12;
+                overflow:hidden;
+            }
+            .worp .main_all{
+                width: 200%;
+            }
+            .worp .main_all>div{
+                float:left;
+                width: 10.8rem;
+            }
+            .worp .fixed{
+                position:fixed;
+                z-index: 20;
+
+            }
+            .worp .main_top{
+                position:relative;
+                z-index: 15;
+                width: 100%;
+                line-height:0.87rem;
+                font-size: 0.44rem;
+                background:#c9c9c9;
+                background:#fff;
+            }
+            .worp .main_top_left{
+                text-align: right;
+                padding-right: 0.62rem;
+                float:left;
+                width:4.78rem;
+                border-radius: 0 0.435rem 0.435rem 0;
+            }
+            .worp .main_top_right{
+                text-align: left;
+                padding-left: 0.62rem;
+                float:left;
+                width:4.78rem;
+                border-radius: 0.435rem 0 0 0.435rem;
+            }
+            .worp .main_top_left_top{
+                color:#fff;
+                background: -webkit-linear-gradient(left, #cd8c88 , #d0240e); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(right, #cd8c88, #d0240e); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(right, #cd8c88, #d0240e); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to right, #cd8c88 , #d0240e); /* 标准的语法 */
+            }
+            .worp .main_top_right_top{
+                color:#fff;
+                background: -webkit-linear-gradient(right, #cd8c88 , #d0240e); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, #cd8c88, #d0240e); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, #cd8c88, #d0240e); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to left, #cd8c88 , #d0240e); /* 标准的语法 */
+            }
+            .worp .none{
+                display:none;
+            }
+            .worp .main_left,.main_right{
+                width: 10.8rem;
+                height:13.56rem;
+
+            }
+            .worp .main_left>div>div,.main_right>div>div{
+                width: 10.8rem;
+            }
+            .worp .main_left img,.main_right img{
+                display: block;
+                width:10.8rem;
+            }
+            .worp .footer{
+                position:fixed;
+                bottom:0;
+                width: 10.8rem;
+                height:1.45rem;
+                background:#000;
+                z-index: 20;
+            }
+           .worp .footer>ul{
+                width: 100%;
+            }
+            .worp .footer>ul>li{
+                width:25%;
+                float:left;
+            }
+            .worp .footer a{
+                display: block;
+                text-align: center;
+                color:#fff;
+                font-size: 0.28rem;
+                text-decoration: none;
+                padding-top: 1rem;
+                line-height: 0.45rem;
+            }
+            .worp .footer li:nth-child(1)>a{
+                color:#dc230e;
+                background:url("../images/f1_36.jpg") no-repeat 1rem 0.22rem;
+                -webkit-background-size: 0.76rem;
+                background-size: 0.76rem;
+            }
+            .worp .footer li:nth-child(2)>a{
+                background:url("../images/f2_36.jpg") no-repeat 1rem 0.22rem;
+                -webkit-background-size: 0.76rem;
+                background-size: 0.76rem;
+            }
+            .worp .footer li:nth-child(3)>a{
+                background:url("../images/f3_36.jpg") no-repeat 1rem 0.22rem;
+                -webkit-background-size: 0.76rem;
+                background-size: 0.76rem;
+            }
+            .worp .footer li:nth-child(4)>a{
+                background:url("../images/f4_36.jpg") no-repeat 1rem 0.22rem;
+                -webkit-background-size: 0.76rem;
+                background-size: 0.76rem;
+            }
+            .worp .footerkong{
+                width: 100%;
+                height: 1.45rem;
+            }
+            .worp2{
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                left:10.8rem;
+                top:0;
+                z-index: 20;
+                width: 10.8rem;
+                height: 19.2rem;
+                background: url("../images/search.jpg") no-repeat;
+                background-size:100%;
+            }
+            .worp2 .back{
+                width: 0.6rem;
+                height: 0.6rem;
+                top:0.88rem;
+                left:9.71rem;
+                position:absolute;
+            }
+            .worp2 input{
+                width: 8rem;
+                line-height: 0.57rem;
+                font-size: 0.36rem;
+                border:none;
+                outline:none;
+                position:absolute;
+                top:0.86rem;
+                left:1.46rem;
+                display: block;
+            }
+            .worpHuihua{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpHuihua .top{
+                width: 10.8rem;
+                height: 1.77rem;
+                background:url("../images/u170.jpg") no-repeat;
+                background-size: 100%;
+            }
+            .worpHuihua .main{
+                width: 10.8rem;
+                height:16.058rem;
+                position:absolute;
+                top:1.77rem;
+                left:0;
+                overflow:auto;
+            }
+            .worpHuihua .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpHuihua .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .worpShuimo{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpShuimo .top{
+                width: 10.8rem;
+                height: 1.77rem;
+                background:url("../images/u178.jpg") no-repeat;
+                background-size: 100%;
+            }
+            .worpShuimo .main{
+                width: 10.8rem;
+                height:16.058rem;
+                position:absolute;
+                top:1.77rem;
+                left:0;
+                overflow:auto;
+            }
+            .worpShuimo .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpShuimo .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .worpSheji{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpSheji .main{
+                width: 10.8rem;
+                height:19.2rem;
+                position:absolute;
+                top:0;
+                left:0;
+                overflow:auto;
+            }
+            .worpSheji .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpSheji .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .worpSheying{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpSheying .main{
+                width: 10.8rem;
+                height:19.2rem;
+                position:absolute;
+                top:0;
+                left:0;
+                overflow:auto;
+            }
+            .worpSheying .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpSheying .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .worpDiaosu{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpDiaosu .main{
+                width: 10.8rem;
+                height:19.2rem;
+                position:absolute;
+                top:0;
+                left:0;
+                overflow:auto;
+            }
+            .worpDiaosu .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpDiaosu .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .worpZhuangzhi{
+                background:  #fff;
+                width: 10.8rem;
+                height: 19.2rem;
+                position:absolute;
+                top:0;
+                left:10.8rem;
+                z-index: 19;
+            }
+            .worpZhuangzhi .main{
+                width: 10.8rem;
+                height:19.2rem;
+                position:absolute;
+                top:0;
+                left:0;
+                overflow:auto;
+            }
+            .worpZhuangzhi .main>img{
+                display: block;
+                width: 100%;
+            }
+            .worpZhuangzhi .back{
+                width: 49px;
+                height: 49px;
+                position:absolute;
+                left:9.68rem;
+                top:0.58rem;
+            }
+            .none{
+                display: none;
+            }

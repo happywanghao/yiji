@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <script>
+            document.documentElement.style.fontSize=document.documentElement.clientWidth / 10.8 + "px";
+        </script>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/geren.css" />
+    </head>
+    <body>
+      <div class="worp">
+        <div class="top">
+            <div class="set clearfix">
+                <a><img src="images/set.png" alt="" /></a>
+            </div>
+            <div class="photo">
+                <a><img src="images/yinyutian_13.jpg" alt="" /></a>
+            </div>
+            <div class="name">阴雨天</div>
+            <div class="top_ul">
+                <ul class="clearfix">
+                    <li>
+                        <p>关注</p>
+                        <p>11</p>
+                    </li>
+                    <li>
+                        <p>发布</p>
+                        <p>9</p>
+                    </li>
+                    <li>
+                        <p>访客</p>
+                        <p>49</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main1">
+                <div class="main1_div clearfix">
+                    <h3>艺象云集</h3>
+                    <img src="images/all_03.jpg" alt="" />
+                </div>
+
+                <ul class="clearfix">
+                    <li>
+                    <a href="gerenshoucang.html">
+                      <img src="images/zhanxun_03.jpg" alt="" />
+                    </a>
+                    <p>订阅/11</p>
+
+                    </li>
+                    <li>
+                    <a href="gerenshoucang2.html">
+                      <img src="images/weizhang_03.jpg" alt="" />
+                    </a>
+
+                        <p>订阅/9</p>
+                    </li>
+                    <li>
+                        <img src="images/zuopin_03.jpg" alt="" />
+                        <p>订阅/49</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="main2">
+                <div class="main_top clearfix">
+                    <div class="main_top_left main_top_left_top">原创</div>
+                    <div class="main_top_right">缓存</div>
+                </div>
+                <div class="main2_bottom clearfix">
+                    <img src="images/geren_left_31.jpg" alt="" />
+                    <img src="images/geren_right_32.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="clearfix">
+                <li><a href="home.html">展讯</a></li>
+                <li><a href="tuijian.html">推荐</a></li>
+                <li><a href="fabu.html">发布</a></li>
+                <li><a>个人</a></li>
+            </ul>
+        </div>
+      </div>
+
+        <div class="worp2 none">
+            <a class="back" href="geren.html">
+            </a>
+        </div>
+        <div class="worp3 none">
+           <div class="top">
+               <div class="back"><a>&lt;</a></div>
+           </div>
+           <div class="main1 clearfix">
+               <ul class="clearfix">
+                   <li class="xianshizhezhao clearfix">
+                       <p>头像</p>
+                       <p class="touxiang"><img src="images/yinyutian_13.jpg" alt="" /></p>
+
+                   </li>
+                   <li class="clearfix">
+                       <p>背景</p>
+                       <p>更换</p>
+
+                   </li>
+                   <li class="clearfix">
+                       <p>名字</p>
+                       <p>阴雨天</p>
+
+                   </li>
+               </ul>
+           </div>
+           <div class="main2 clearfix">
+               <ul>
+                   <li class="clearfix">
+                       <p>我的二维码</p>
+                       <p class="erweima"><img src="images/erweima_28.jpg" alt="" /></p>
+                   </li>
+                   <li class="clearfix">
+                       <p>我的地址</p>
+                       <p>北京市 海淀区</p>
+                   </li>
+                   <li class="clearfix">
+                       <p>隐私</p>
+                       <p class="gantanhao"><img src="images/gantanhao_31.jpg" alt="" /></p>
+                   </li>
+               </ul>
+               <p class="weibaohuyinsi">为保护用户隐私，请您尽量选择默认隐私设置</p>
+           </div>
+          <div class="zhezhao none"></div>
+          <div class="jinruxiangce none"><img src="images/jinruxiangce_02.jpg" alt="" /></div>
+        </div>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/hammer.min.js"></script>
+        <script>
+            var setImg=document.getElementsByClassName("set")[0].getElementsByTagName("img")[0]
+            var worp2Back=document.getElementsByClassName("worp2")[0].getElementsByClassName("back")[0]
+            var photoImg=document.getElementsByClassName("photo")[0].getElementsByTagName("img")[0]
+            var worp3back=document.getElementsByClassName("worp3")[0].getElementsByClassName("back")[0]
+            var xianshizhezhao=document.getElementsByClassName("xianshizhezhao")[0]
+            var quxiaozhezhao=document.getElementsByClassName("jinruxiangce")[0]
+              new Hammer(setImg).on("tap",function(){
+                $(".worp2").removeClass('none').animate({"left":0},300)
+            })
+
+              new Hammer(worp2Back).on("tap",function(){
+                $(".worp2").animate({"left":"10.8rem"},300,function(){this.addClass('none')})
+            })
+             new Hammer(photoImg).on("tap",function(){
+                $(".worp3").removeClass('none').animate({"left":0},300)
+            })
+             new Hammer(worp3back).on("tap",function(){
+                $(".worp3").animate({"left":"10.8rem"},300,function(){this.addClass('none')})
+            })
+             new Hammer(xianshizhezhao).on("tap",function(){
+                $(".zhezhao").removeClass('none')
+                $(".jinruxiangce").removeClass('none').animate({"bottom":0})
+             })
+             new Hammer(quxiaozhezhao).on("tap",function(){
+                $(".zhezhao").addClass('none')
+                $(".jinruxiangce").animate({"bottom":"-4.25rem"},300,function(){this.addClass('none')})
+             })
+        </script>
+    </body>
+</html>
